@@ -29,8 +29,7 @@ greaterThanBtn.onclick=()=>{
         timer=5;
         score++
         generateRandomNumbers();
-        localStorage.setItem("score",score);
-        countDown();
+       
      } else{
        
         window.location.href="./gameover.html";
@@ -41,8 +40,7 @@ equalToBtn.onclick=()=>{
         timer=5;
         score++
         generateRandomNumbers();
-        localStorage.setItem("score",score);
-        countDown();
+       
     }else{
         
         window.location.href="./gameover.html";
@@ -53,8 +51,7 @@ lessThanBtn.onclick=()=>{
         timer=5;
         score++
         generateRandomNumbers();
-        localStorage.setItem("score",score);
-        countDown();
+        
     }else{
        
         window.location.href="./gameover.html";
@@ -69,8 +66,11 @@ lessThanBtn.onclick=()=>{
 let timerDiv=document.getElementById("timer");
 
 function countDown(){
+    localStorage.setItem("score",score);
+        
+
 if(timer>=0){
-    //timer
+
     timerDiv.innerText= timer;
     timer--;
    }else{
